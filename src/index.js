@@ -8,15 +8,20 @@ import menu from './menu.js'
 const content = document.querySelector('.content')
 
 const header = document.createElement('header')
-    header.textContent = 'Header'
+const headerText = document.createElement('h2')
+    headerText.textContent = `Odin Coffee`
     content.appendChild(header)
-
+    header.appendChild(headerText)
+    
 const main = document.createElement('main')
     content.appendChild(main)
 
 const nav = document.createElement('ul')
+    nav.classList.add('nav')
     header.appendChild(nav)
+
 main.appendChild(home())
+
 let navList = ['Home', 'Menu', 'About']
     navList.forEach((item) => {
         const navListItem = document.createElement('li')

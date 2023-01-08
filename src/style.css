@@ -5,16 +5,80 @@
 }
 
 body {
-    background-color: midnightblue;
-    color: white;
-
+    background-color: whitesmoke;
+    color: darkslategray;
+    height: 100vh;
 }
 
 main {
     border: 1px solid white;
     height: 100vh;
+    display: grid;
+    justify-content: center;
+    background: linear-gradient(to bottom, darkslategray 50vh, whitesmoke 50vh);
 }
 
 header {
-    border: 1px solid red;
+}
+
+header h2 {
+    font-size: 3rem;
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.nav-li {
+    list-style: none;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#home {
+    text-align: center;
+}
+
+.home-title, .menu-title, .about-title {
+    display: grid;
+    position: relative;
+    text-align: center;
+    justify-items: center;
+}
+
+#menu {
+    text-align: center;
+}
+
+#about {
+    text-align: center;
+}
+
+#hero-img, #menu-img, #about-img {
+    height: 50vh;
+    width: 1200px;
+    object-fit: fill;
+}
+
+h1 {
+    color: whitesmoke;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    font-size: 5rem;
+    text-shadow: 2px 2px 7px darkslategray;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 2rem;
+}
+
+.menu-items-img {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
 }

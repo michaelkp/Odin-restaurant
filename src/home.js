@@ -13,13 +13,17 @@ export default function home() {
 function homeArticle(homeSection) {
     console.log('----------');
     console.log('HOME article');
+    const homeTitle = document.createElement('div')
+        homeTitle.classList.add('home-title')
+        homeSection.appendChild(homeTitle)
     const homeH1 = document.createElement('h1')
         homeH1.textContent = 'Wecome to Odin Coffee'
-        homeSection.appendChild(homeH1)
+        homeTitle.appendChild(homeH1)
     const homeHero = new Image()
         homeHero.src = hero
         homeHero.alt = 'Odin Coffee Shop'
-        homeSection.appendChild(homeHero)
+        homeHero.id = 'hero-img'
+        homeTitle.appendChild(homeHero)
     const homeP = document.createElement('p')
         homeP.textContent = 'Home of the finest coffee from around the world!'
         homeSection.appendChild(homeP)
