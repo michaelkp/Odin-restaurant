@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Libre-Baskerville';
+    src: url('./fonts/LibreBaskerville-Regular.ttf') format('truetype');
+    font-family: 'Nunito-Sans';
+    src: url('./fonts/NunitoSans-Regular.ttf') format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,17 +15,26 @@ body {
     background-color: whitesmoke;
     color: darkslategray;
     height: 100vh;
+    font-family: 'Nunito-Sans';
 }
 
-main {
-    border: 1px solid white;
+/* .content {
     height: 100vh;
+    display: grid;
+} */
+
+main {
+    /* height: 100vh; */
     display: grid;
     justify-content: center;
     background: linear-gradient(to bottom, darkslategray 50vh, whitesmoke 50vh);
 }
 
 header {
+    /* height: 10vh; */
+    width: 85vw;
+    display: grid;
+    justify-items: end;
 }
 
 header h2 {
@@ -28,16 +44,27 @@ header h2 {
 .nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    /* margin-bottom: .5rem; */
+    line-height: 2rem;
 }
 
 .nav-li {
     list-style: none;
     text-align: center;
     font-size: 1.5rem;
+    padding-inline: 15px;
+    padding-top: 5px;
+}
+
+.nav-li:hover, .nav-li:active {
+    background-color: rgb(47, 79, 79, .3);
+    color: whitesmoke;
+    cursor: pointer;
 }
 
 #home {
     text-align: center;
+    width: 85vw;
 }
 
 .home-title, .menu-title, .about-title {
@@ -49,15 +76,19 @@ header h2 {
 
 #menu {
     text-align: center;
+    width: 85vw;
+
 }
 
 #about {
     text-align: center;
+    width: 85vw;
+
 }
 
 #hero-img, #menu-img, #about-img {
     height: 50vh;
-    width: 1200px;
+    width: 85vw;
     object-fit: fill;
 }
 
@@ -66,19 +97,38 @@ h1 {
     position: absolute;
     bottom: 0;
     z-index: 1;
+    margin-bottom: 20px;
     font-size: 5rem;
-    text-shadow: 2px 2px 7px darkslategray;
+    font-family: 'Libre-Baskerville';
+    text-shadow: 5px 5px 6px darkslategray;
+}
+
+p {
+    margin-block: 3rem;
+    font-size: 1.3rem;
 }
 
 .menu-items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
+    justify-items: center;
     gap: 2rem;
+    text-align: left;
+    margin-inline: auto;
+    width: max-content;
+}
+
+.menu-items p {
+    margin-top: .3rem;
 }
 
 .menu-items-img {
+    margin-inline: 25px;
     height: 200px;
     width: 200px;
     border-radius: 10px;
+}
+
+.menu-coffee, .menu-milkshake, .menu-snacks {
+    width: 250px;
 }
