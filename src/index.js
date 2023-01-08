@@ -29,7 +29,6 @@ let navList = ['Home', 'Menu', 'About']
             navListItem.addEventListener('pointerup', (item) => {
                 console.log('event test ------------');
                 const tabList = document.querySelectorAll('section')
-                console.log(tabList);
                 if(navListItem.id === 'Home') {
                     main.replaceChild(home(), ...tabList)
                 }
